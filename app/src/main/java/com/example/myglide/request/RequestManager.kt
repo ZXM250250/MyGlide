@@ -1,6 +1,5 @@
 package com.example.myglide.request
 
-import android.util.Log
 import java.util.concurrent.Executors
 import java.util.concurrent.LinkedBlockingQueue
 
@@ -34,7 +33,7 @@ object RequestManager {      //负责所有的请求管理
                 for (index in 1..threadCount){
                 val picDispatcherThread = PicDispatcherThread(requestQueue)
                     executorService.execute(picDispatcherThread)
-                    Log.i("测试","执行了吗startAllPicDispatcherThread()")
+                //    Log.i("测试","执行了吗startAllPicDispatcherThread()")
                     bitmapDispatchers.add(picDispatcherThread)
                 }
             }
